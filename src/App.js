@@ -5,8 +5,7 @@ function App() {
   return (
     <div>
       <Home />
-
-      {/* TODO: Replace this placeholder with Routes */}
+      
     </div>
   );
 }
