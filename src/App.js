@@ -1,12 +1,26 @@
-import React from 'react';
-import Home from './pages/Home';
+import React, { useEffect } from 'react';
+import { fetchTaskById } from './api/client';
+import './App.css';
+import { Route } from 'react-router-dom';
+
 
 function App() {
+  // useEffect(() => {
+  //   const testApi = async () => {
+  //    const data = await fetchTaskById(1);
+  //    console.log('Fetched task:', data);
+  //   }
+  //   testApi();
+  // }, []);
+
+
   return (
-    <div>
-      <Home />
-      
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/tasks/:id" element={<QuestionPage />} />
+      </Routes>
+    </Router>
   );
 }
 
